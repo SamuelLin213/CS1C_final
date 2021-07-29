@@ -134,6 +134,20 @@ void MainWindow::move()
             int newY = QInputDialog::getInt(this, tr("New Coordinates"),
                                             tr("New Y:"),
                                             0, 0, 475, 1, &ok);
+            if(renderArea->shapeList[changeId]->getShape() == Shape::Po)
+            
+            //for polyline, polygon
+            (int)(renderArea->shapeList[0]->getDimensions().size()/2);
+            
+            //line - 2
+            //polyline - n points
+            //polgon - n points
+            //rectangle - 1 points
+            //square - 1 points
+            //ellipse - 1
+            //circle - 1
+            // text - 1
+            
 
             int coords[2] = {newX, newY};
 

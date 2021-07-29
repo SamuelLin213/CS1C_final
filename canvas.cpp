@@ -1,4 +1,6 @@
 #include "canvas.h"
+#include "Shapes.h"
+#include "mainwindow.h"
 #include <QPainter>
 #include <QPainterPath>
 #include <QTextEdit>
@@ -7,6 +9,33 @@ canvas::canvas(QWidget *parent)
     : QWidget(parent)
     //, ui(new Ui::canvas)
 {
+    shapeList.push_back(new Line(1, Shape::LINE));
+    shapeList.push_back(new class Polyline(2, Shape::POLYLINE));
+    shapeList.push_back(new class Polygon(3, Shape::POLYGON));
+    shapeList.push_back(new class Rectangle(4, Shape::RECTANGLE));
+    shapeList.push_back(new class Rectangle(5, Shape::SQUARE));
+    shapeList.push_back(new class Ellipse(6, Shape::ELLIPSE));
+    shapeList.push_back(new class Ellipse(7, Shape::CIRCLE));
+    shapeList.push_back(new class Text(8, Shape::TEXT));
+
+    shapeList[0]->addDimension(20);
+    shapeList[0]->addDimension(90);
+    shapeList[0]->addDimension(100);
+    shapeList[0]->addDimension(20);
+    shapeList[0]->setPen(Qt::black);
+    shapeList[0]->setBrush(Qt::black, Qt::SolidPattern);
+//    shapeList[0]->setLine();
+
+    shapeList[1]->addDimension(460);
+    shapeList[1]->addDimension(90);
+    shapeList[1]->addDimension(470);
+    shapeList[1]->addDimension(20);
+    shapeList[1]->addDimension(530);
+    shapeList[1]->addDimension(40);
+    shapeList[1]->addDimension(540);
+    shapeList[1]->addDimension(80);
+    shapeList[1]->setPen(Qt::black);
+    shapeList[1]->setBrush(Qt::black, Qt::SolidPattern);
 
     setBackgroundRole(QPalette::Base);
     setAutoFillBackground(true);
@@ -14,21 +43,27 @@ canvas::canvas(QWidget *parent)
 void canvas::paintEvent(QPaintEvent *)
 {
     painter = new QPainter(this);
-    QVector<QPoint> points;
-    QVector<QPoint> points2;
+//    QVector<QPoint> points;
+//    QVector<QPoint> points2;
+
+    for(int i = 0; i < 2; i++)
+    {
+        shapeList[i]->draw(painter);
+    }
+
 
     switch(shapeToDraw)
     {
         case 1:
-            painter->drawLine(20, 90, 100, 20);
+            //painter->drawLine(this);
             break;
         case 2:
-            points.push_back(QPoint(460, 90));
-            points.push_back(QPoint(470, 20));
-            points.push_back(QPoint(530, 40));
-            points.push_back(QPoint(540, 80));
+//            points.push_back(QPoint(460, 90));
+//            points.push_back(QPoint(470, 20));
+//            points.push_back(QPoint(530, 40));
+//            points.push_back(QPoint(540, 80));
 
-            painter->drawPolyline(points);
+//            painter->drawPolyline(points);
             break;
         case 3:
             points2.push_back(QPoint(900, 90));
@@ -100,6 +135,14 @@ void canvas::drawText()
     update();
 }
 void canvas::moveShape()
+{
+    update();
+}
+void canvas::removeShape()
+{
+    update();
+}
+void canvas::addShape()
 {
     update();
 }

@@ -7,7 +7,7 @@
 #include <QObject>
 #include <QtCore>
 #include <QWidget>
-#include "ui_mainwindow.h"
+#include "Shapes.h"
 
 class canvas : public QWidget
 {
@@ -25,14 +25,21 @@ public:
     void drawCircle();
     void drawText();
     void moveShape();
+    void removeShape();
+    void addShape();
     QPainter* getPainter();
 
     int shapeToDraw = 0;
 
+
+    std::vector<Shape*> shapeList;
 protected:
     // Function used to close an event
     void paintEvent(QPaintEvent *e) override;
     QPainter *painter;
+
+    QVector<QPoint> points;
+    QVector<QPoint> points2;
 };
 
 #endif // CANVAS_H

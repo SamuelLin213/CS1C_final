@@ -5,6 +5,14 @@
 #include <QPushButton>
 #include "loginWindow.h"
 #include "contactWindow.h"
+#include "Shapes.h"
+#include "Line.h"
+#include "Polyline.h"
+#include "Polygon.h"
+#include "Rectangle.h"
+#include "Ellipse.h"
+#include "Text.h"
+#include <vector>
 
 class canvas;
 
