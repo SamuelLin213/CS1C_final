@@ -1,6 +1,6 @@
 #ifndef SERIALIZER_H
 #define SERIALIZER_H
-
+/*! \file */
 #include <QPainter>
 #include <Qt>
 #include <iostream>

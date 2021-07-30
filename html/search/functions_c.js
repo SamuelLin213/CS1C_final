@@ -1,5 +1,14 @@
 var searchData=
 [
+  ['savecircle',['SaveCircle',['../serializer_8h.html#a832cb2053709fa3f6ea00d2c59f90272',1,'serializer.cpp']]],
+  ['saveellipse',['SaveEllipse',['../serializer_8h.html#a9930f9f5956a84422cbcafb2aedb5c5a',1,'serializer.cpp']]],
+  ['savefile',['SaveFile',['../serializer_8h.html#a5f06c8f2a1059f0a548ba3368f02fd42',1,'serializer.cpp']]],
+  ['saveline',['SaveLine',['../serializer_8h.html#a6e14621fa88e35c0386ab45eddf6fd16',1,'serializer.cpp']]],
+  ['savepolygon',['SavePolygon',['../serializer_8h.html#a09bd95b94ad6c457c36621f6044c7244',1,'serializer.cpp']]],
+  ['savepolyline',['SavePolyline',['../serializer_8h.html#a092caccb5c6d3e28b0001a7eeaf0cf1c',1,'serializer.cpp']]],
+  ['saverectangle',['SaveRectangle',['../serializer_8h.html#a6d864fe600b10de59aeca96afc650b4d',1,'serializer.cpp']]],
+  ['savesquare',['SaveSquare',['../serializer_8h.html#a6cdb6953f010be8c856410bd93cd51e9',1,'serializer.cpp']]],
+  ['savetext',['SaveText',['../serializer_8h.html#a0588b612dafc727851cd574408a5886b',1,'serializer.cpp']]],
   ['setalignment',['setAlignment',['../classText.html#aacba6ed9c31bb9433903aec9bc000072',1,'Text']]],
   ['setbrush',['setBrush',['../classShape.html#a2ec2004e468730778d28ec731c3ae099',1,'Shape']]],
   ['setbrushcolor',['setBrushColor',['../classShape.html#aad508aff38bf0edcf8dae0749ca98db9',1,'Shape']]],

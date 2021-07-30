@@ -1,15 +1,23 @@
 var searchData=
 [
+  ['getalignment',['getAlignment',['../shapeparser_8h.html#a4ab4e2e75bfc471be43f9025709ed179',1,'shapeparser.cpp']]],
   ['getauthor',['getAuthor',['../structtestimonialWindow_1_1Testimony.html#a372f823ae3b96d3c8148552c41d42942',1,'testimonialWindow::Testimony']]],
   ['getbrush',['getBrush',['../classShape.html#a4fff90728217432c4510dbcdbf3cd9e6',1,'Shape']]],
+  ['getbrushstyle',['getBrushStyle',['../shapeparser_8h.html#a66b2cd0e690a7438ededaff252d3e3a3',1,'shapeparser.cpp']]],
+  ['getcolor',['getColor',['../shapeparser_8h.html#a47d9293f20640af5c3f1de6a156f6675',1,'shapeparser.cpp']]],
   ['getdescription',['getDescription',['../structtestimonialWindow_1_1Testimony.html#ad4a87daf5eeffecaa7cc25be43d77d7a',1,'testimonialWindow::Testimony']]],
   ['getdimensions',['getDimensions',['../classShape.html#a6ab7f82dd146b522b981fd5b5451f3dd',1,'Shape']]],
   ['getelem',['getElem',['../classmyVector.html#acb4efd22fb41d436fe2d2f1e5bd41963',1,'myVector']]],
   ['getfont',['getFont',['../classText.html#acb0cbec93eb68a03faffc9e70f5895b7',1,'Text']]],
+  ['getfontstyle',['getFontStyle',['../shapeparser_8h.html#aea21d00e82939f066d00a9af7a28c829',1,'shapeparser.cpp']]],
+  ['getfontweight',['getFontWeight',['../shapeparser_8h.html#ac2d860d1d18ffdf609f1ec4a500ef453',1,'shapeparser.cpp']]],
   ['getid',['getId',['../classShape.html#ad24c5659cb3bdbeb8881b62a8402df98',1,'Shape']]],
   ['getline',['GetLine',['../classLine.html#a99f31a56b03cc8e92d30269face52b56',1,'Line']]],
-  ['getpainter',['getPainter',['../classShape.html#a754ef1fcea3fbe3c3612da480ba8dd75',1,'Shape']]],
+  ['getpainter',['getPainter',['../classcanvas.html#afa0c61fa615cee29c14ecd6df4091e1d',1,'canvas::getPainter()'],['../classShape.html#a754ef1fcea3fbe3c3612da480ba8dd75',1,'Shape::getPainter()']]],
   ['getpen',['getPen',['../classShape.html#ab3420c1972e190923410abcc36a1db78',1,'Shape']]],
+  ['getpencapstyle',['getPenCapStyle',['../shapeparser_8h.html#ae48d1a3ee379a855ce363e48d1387799',1,'shapeparser.cpp']]],
+  ['getpenjoinstyle',['getPenJoinStyle',['../shapeparser_8h.html#a325984dc1bf5803e6dd6cf129f31fea5',1,'shapeparser.cpp']]],
+  ['getpenstyle',['getPenStyle',['../shapeparser_8h.html#a2c31b070e1d148061afd83273f7d27d8',1,'shapeparser.cpp']]],
   ['getshape',['getShape',['../classShape.html#a558bed85fed8077108f17fe4c7ce38aa',1,'Shape']]],
   ['gettext',['getText',['../classText.html#ab1ccc5ff9050cb8c63919bfc82c69a18',1,'Text']]]
 ];

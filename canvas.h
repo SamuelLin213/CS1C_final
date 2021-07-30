@@ -1,6 +1,6 @@
 #ifndef CANVAS_H
 #define CANVAS_H
-
+/*! \file */
 #include <QMainWindow>
 #include <QtGui>
 #include <QList>
