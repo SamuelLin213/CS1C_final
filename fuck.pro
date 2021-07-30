@@ -20,7 +20,9 @@ SOURCES += \
     contactWindow.cpp \
     loginWindow.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    shapeparser.cpp \
+    testimonialWindow.cpp
 
 HEADERS += \
     Ellipse.h \
@@ -33,7 +35,10 @@ HEADERS += \
     canvas.h \
     contactWindow.h \
     loginWindow.h \
-    mainwindow.h
+    mainwindow.h \
+    shapeparser.h \
+    testimonialWindow.h \
+    vector.h
 
 FORMS += \
     mainwindow.ui
@@ -46,7 +51,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 DISTFILES += \
     fuck.pro.user \
     logo.png \
-    shapes.txt
+    testimonies.txt
 
 RESOURCES += \
     application.qrc

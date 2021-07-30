@@ -8,6 +8,7 @@
 #include <QtCore>
 #include <QWidget>
 #include "Shapes.h"
+#include "vector.h"
 
 class canvas : public QWidget
 {
@@ -29,7 +30,7 @@ public:
     void addShape();
     QPainter* getPainter();
 
-    std::vector<Shape*> shapeList;
+    myVector<Shape*> shapeList;
 protected:
     // Function used to close an event
     void paintEvent(QPaintEvent *e) override;

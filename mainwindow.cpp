@@ -190,8 +190,9 @@ void MainWindow::remove()
           {
               if(renderArea->shapeList[i]->getId() == selectId)
               {
-                  renderArea->shapeList.erase(std::remove(renderArea->shapeList.begin(), renderArea->shapeList.end(), renderArea->shapeList[i]), renderArea->shapeList.end());
-                  //renderArea->shapeList.erase(renderArea->shapeList.begin() + i);
+                  //renderArea->shapeList.erase(std::remove(renderArea->shapeList.begin(), renderArea->shapeList.end(), renderArea->shapeList[i]), renderArea->shapeList.end());
+
+                  renderArea->shapeList.erase(renderArea->shapeList.begin() + i);
 //                  if(i != (int)(renderArea->shapeList.size()) -1)
 //                  {
 //                      renderArea->shapeList[i] = std::move(renderArea->shapeList.back());

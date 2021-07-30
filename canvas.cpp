@@ -1,6 +1,7 @@
 #include "canvas.h"
 #include "Shapes.h"
 #include "mainwindow.h"
+#include "shapeparser.h"
 #include <QPainter>
 #include <QPainterPath>
 #include <QTextEdit>
@@ -11,6 +12,7 @@ canvas::canvas(QWidget *parent)
     : QWidget(parent)
     //, ui(new Ui::canvas)
 {
+    //shapeList = LoadFile();
     shapeList.push_back(new class Line(1, Shape::LINE));
     shapeList.push_back(new class Polyline(2, Shape::POLYLINE));
     shapeList.push_back(new class Polygon(3, Shape::POLYGON));
