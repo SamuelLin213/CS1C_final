@@ -76,79 +76,10 @@ canvas::canvas(QWidget *parent)
 void canvas::paintEvent(QPaintEvent *)
 {
     painter = new QPainter(this);
-    bool ok;
-
-    //line, polyline
-    int shapeId;
-    std::vector<int> dimensionVector;
 
     for(int i = 0; i < (int)(shapeList.size()); i++)
     {
         shapeList[i]->draw(painter);
-    }
-
-    if(shapeToDraw == 1)
-    {
-
-        shapeId = QInputDialog::getInt(this, tr("Add shape"),
-                                          tr("Enter id of shape:"),
-                                          1, 1, 50, 1, &ok);
-
-        for(int i = 1; i <= 2; i++)
-        {
-            int newX = QInputDialog::getInt(this, tr("New Coordinates"),
-                                                 tr("New X:"),
-                                                 0, 0, 850, 1, &ok);
-            int newY = QInputDialog::getInt(this, tr("New Coordinates"),
-                                            tr("New Y:"),
-                                            0, 0, 475, 1, &ok);
-            dimensionVector.push_back(newX);
-            dimensionVector.push_back(newY);
-            //coords[numCoords] = {newX, newY};
-        }
-
-        //loops through vector and assigns dimensions to int array
-        int size = dimensionVector.size();
-        int coordAr[size];
-        for(int index = 0; index < size; index++)
-        {
-            coordAr[index] = dimensionVector[index];
-        }
-
-        shapeList.push_back(new class Line(shapeId, Shape::LINE));
-        //applies new coords
-        shapeList[shapeList.size()-1]->move(coordAr);
-
-        moveShape();
-
-    }
-    else if(shapeToDraw == 2)
-    {
-
-    }
-    else if(shapeToDraw == 3)
-    {
-
-    }
-    else if(shapeToDraw == 4)
-    {
-
-    }
-    else if(shapeToDraw == 5)
-    {
-
-    }
-    else if(shapeToDraw == 6)
-    {
-
-    }
-    else if(shapeToDraw == 7)
-    {
-
-    }
-    else if(shapeToDraw == 8)
-    {
-
     }
 }
 QPainter* canvas::getPainter()
@@ -157,42 +88,291 @@ QPainter* canvas::getPainter()
 }
 void canvas::drawLine()
 {
-    shapeToDraw = 1;
+    bool ok;
+    int shapeId;
+    std::vector<int> dimensionVector;
+
+    shapeId = QInputDialog::getInt(this, tr("Add shape"),
+                                      tr("Enter id of shape:"),
+                                      1, 1, 50, 1, &ok);
+
+    for(int i = 1; i <= 2; i++)
+    {
+        int newX = QInputDialog::getInt(this, tr("New Coordinates"),
+                                             tr("New X:"),
+                                             0, 0, 850, 1, &ok);
+        int newY = QInputDialog::getInt(this, tr("New Coordinates"),
+                                        tr("New Y:"),
+                                        0, 0, 475, 1, &ok);
+        dimensionVector.push_back(newX);
+        dimensionVector.push_back(newY);
+    }
+
+    shapeList.push_back(new class Line(shapeId, Shape::LINE));
+    //applies new coords
+    for(int i = 0; i < 4; i++)
+    {
+        shapeList[shapeList.size()-1]->addDimension(dimensionVector[i]);
+    }
+    dynamic_cast<Line*>(shapeList[shapeList.size()-1])->setLine();
+
     update();
 }
 void canvas::drawPolyline()
 {
-    shapeToDraw = 2;
+    bool ok;
+    int shapeId;
+    int numPoints;
+    std::vector<int> dimensionVector;
+
+    shapeId = QInputDialog::getInt(this, tr("Add shape"),
+                                      tr("Enter id of shape:"),
+                                      1, 1, 50, 1, &ok);
+    numPoints = QInputDialog::getInt(this, tr("Points"),
+                                     tr("Number of points to move(default 1):"),
+                                     1, 1, 50, 1, &ok);
+
+
+    for(int i = 0; i < numPoints; i++)
+    {
+        int newX = QInputDialog::getInt(this, tr("New Coordinates"),
+                                             tr("New X:"),
+                                             0, 0, 850, 1, &ok);
+        int newY = QInputDialog::getInt(this, tr("New Coordinates"),
+                                        tr("New Y:"),
+                                        0, 0, 475, 1, &ok);
+        dimensionVector.push_back(newX);
+        dimensionVector.push_back(newY);
+    }
+
+    shapeList.push_back(new class Polyline(shapeId, Shape::POLYLINE));
+    //applies new coords
+    for(int i = 0; i < (int)(dimensionVector.size()); i++)
+    {
+        shapeList[shapeList.size()-1]->addDimension(dimensionVector[i]);
+    }
+
     update();
 }
 void canvas::drawPolygon()
 {
-    shapeToDraw = 3;
+    bool ok;
+    int shapeId;
+    int numPoints;
+    std::vector<int> dimensionVector;
+
+    shapeId = QInputDialog::getInt(this, tr("Add shape"),
+                                      tr("Enter id of shape:"),
+                                      1, 1, 50, 1, &ok);
+    numPoints = QInputDialog::getInt(this, tr("Points"),
+                                     tr("Number of points to move(default 1):"),
+                                     1, 1, 50, 1, &ok);
+
+
+    for(int i = 0; i < numPoints; i++)
+    {
+        int newX = QInputDialog::getInt(this, tr("New Coordinates"),
+                                             tr("New X:"),
+                                             0, 0, 850, 1, &ok);
+        int newY = QInputDialog::getInt(this, tr("New Coordinates"),
+                                        tr("New Y:"),
+                                        0, 0, 475, 1, &ok);
+        dimensionVector.push_back(newX);
+        dimensionVector.push_back(newY);
+    }
+
+    shapeList.push_back(new class Polygon(shapeId, Shape::POLYGON));
+    //applies new coords
+    for(int i = 0; i < (int)(dimensionVector.size()); i++)
+    {
+        shapeList[shapeList.size()-1]->addDimension(dimensionVector[i]);
+    }
+
     update();
 }
 void canvas::drawRectangle()
 {
-    shapeToDraw = 4;
+    bool ok;
+    int shapeId;
+    std::vector<int> dimensionVector;
+
+    shapeId = QInputDialog::getInt(this, tr("Add shape"),
+                                      tr("Enter id of shape:"),
+                                      1, 1, 50, 1, &ok);
+
+    int newX = QInputDialog::getInt(this, tr("New Coordinates"),
+                                         tr("New X:"),
+                                         0, 0, 850, 1, &ok);
+    int newY = QInputDialog::getInt(this, tr("New Coordinates"),
+                                    tr("New Y:"),
+                                    0, 0, 475, 1, &ok);
+    dimensionVector.push_back(newX);
+    dimensionVector.push_back(newY);
+
+    newX = QInputDialog::getInt(this, tr("New dimensions"),
+                                             tr("New length:"),
+                                             0, 0, 850, 1, &ok);
+    newY = QInputDialog::getInt(this, tr("New dimensions"),
+                                        tr("New width:"),
+                                        0, 0, 475, 1, &ok);
+    dimensionVector.push_back(newX);
+    dimensionVector.push_back(newY);
+
+    shapeList.push_back(new class Rectangle(shapeId, Shape::RECTANGLE));
+    //applies new coords
+    for(int i = 0; i < 4; i++)
+    {
+        shapeList[shapeList.size()-1]->addDimension(dimensionVector[i]);
+    }
+
     update();
 }
 void canvas::drawSquare()
 {
-    shapeToDraw = 5;
+    bool ok;
+    int shapeId;
+    std::vector<int> dimensionVector;
+
+    shapeId = QInputDialog::getInt(this, tr("Add shape"),
+                                      tr("Enter id of shape:"),
+                                      1, 1, 50, 1, &ok);
+
+    int newX = QInputDialog::getInt(this, tr("New Coordinates"),
+                                         tr("New X:"),
+                                         0, 0, 850, 1, &ok);
+    int newY = QInputDialog::getInt(this, tr("New Coordinates"),
+                                    tr("New Y:"),
+                                    0, 0, 475, 1, &ok);
+    dimensionVector.push_back(newX);
+    dimensionVector.push_back(newY);
+
+    newX = QInputDialog::getInt(this, tr("New dimensions"),
+                                             tr("New length:"),
+                                             0, 0, 850, 1, &ok);
+    dimensionVector.push_back(newX);
+    dimensionVector.push_back(newX);
+
+    shapeList.push_back(new class Rectangle(shapeId, Shape::SQUARE));
+    //applies new coords
+    for(int i = 0; i < 4; i++)
+    {
+        shapeList[shapeList.size()-1]->addDimension(dimensionVector[i]);
+    }
+
     update();
 }
 void canvas::drawEllipse()
 {
-    shapeToDraw = 6;
+    bool ok;
+    int shapeId;
+    std::vector<int> dimensionVector;
+
+    shapeId = QInputDialog::getInt(this, tr("Add shape"),
+                                      tr("Enter id of shape:"),
+                                      1, 1, 50, 1, &ok);
+
+    int newX = QInputDialog::getInt(this, tr("New Coordinates"),
+                                         tr("New X:"),
+                                         0, 0, 850, 1, &ok);
+    int newY = QInputDialog::getInt(this, tr("New Coordinates"),
+                                    tr("New Y:"),
+                                    0, 0, 475, 1, &ok);
+    dimensionVector.push_back(newX);
+    dimensionVector.push_back(newY);
+
+    newX = QInputDialog::getInt(this, tr("New axis"),
+                                             tr("New semi-major axis:"),
+                                             0, 0, 850, 1, &ok);
+    newY = QInputDialog::getInt(this, tr("New axis"),
+                                        tr("New semi-minor axis:"),
+                                        0, 0, 475, 1, &ok);
+    dimensionVector.push_back(newX);
+    dimensionVector.push_back(newY);
+
+    shapeList.push_back(new class Ellipse(shapeId, Shape::ELLIPSE));
+    //applies new coords
+    for(int i = 0; i < 4; i++)
+    {
+        shapeList[shapeList.size()-1]->addDimension(dimensionVector[i]);
+    }
+
     update();
 }
 void canvas::drawCircle()
 {
-    shapeToDraw = 7;
+    bool ok;
+    int shapeId;
+    std::vector<int> dimensionVector;
+
+    shapeId = QInputDialog::getInt(this, tr("Add shape"),
+                                      tr("Enter id of shape:"),
+                                      1, 1, 50, 1, &ok);
+
+    int newX = QInputDialog::getInt(this, tr("New Coordinates"),
+                                         tr("New X:"),
+                                         0, 0, 850, 1, &ok);
+    int newY = QInputDialog::getInt(this, tr("New Coordinates"),
+                                    tr("New Y:"),
+                                    0, 0, 475, 1, &ok);
+    dimensionVector.push_back(newX);
+    dimensionVector.push_back(newY);
+
+    newX = QInputDialog::getInt(this, tr("New dimension"),
+                                             tr("New radius:"),
+                                             0, 0, 850, 1, &ok);
+    dimensionVector.push_back(newX);
+    dimensionVector.push_back(newX);
+
+    shapeList.push_back(new class Ellipse(shapeId, Shape::CIRCLE));
+    //applies new coords
+    for(int i = 0; i < 4; i++)
+    {
+        shapeList[shapeList.size()-1]->addDimension(dimensionVector[i]);
+    }
+
     update();
 }
 void canvas::drawText()
 {
-    shapeToDraw = 8;
+    bool ok;
+    int shapeId;
+    std::vector<int> dimensionVector;
+
+    shapeId = QInputDialog::getInt(this, tr("Add shape"),
+                                      tr("Enter id of shape:"),
+                                      1, 1, 50, 1, &ok);
+
+
+    int newX = QInputDialog::getInt(this, tr("New Coordinates"),
+                                         tr("New X:"),
+                                         0, 0, 850, 1, &ok);
+    int newY = QInputDialog::getInt(this, tr("New Coordinates"),
+                                    tr("New Y:"),
+                                    0, 0, 475, 1, &ok);
+    dimensionVector.push_back(newX);
+    dimensionVector.push_back(newY);
+
+    newX = QInputDialog::getInt(this, tr("New dimensions"),
+                                             tr("New length:"),
+                                             0, 0, 850, 1, &ok);
+    newY = QInputDialog::getInt(this, tr("New dimensions"),
+                                        tr("New width:"),
+                                        0, 0, 475, 1, &ok);
+    dimensionVector.push_back(newX);
+    dimensionVector.push_back(newY);
+
+    shapeList.push_back(new class Text(shapeId, Shape::TEXT));
+    //applies new coords
+    for(int i = 0; i < 4; i++)
+    {
+        shapeList[shapeList.size()-1]->addDimension(dimensionVector[i]);
+    }
+    QString text = QInputDialog::getText(this, tr("Get message"),
+                                         tr("Text to display:"), QLineEdit::Normal,
+                                         tr("your message"), &ok);
+
+    dynamic_cast<Text*>(shapeList[shapeList.size()-1])->setText(text);
+
     update();
 }
 void canvas::moveShape()

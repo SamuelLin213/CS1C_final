@@ -29,9 +29,6 @@ public:
     void addShape();
     QPainter* getPainter();
 
-    int shapeToDraw = 0;
-
-
     std::vector<Shape*> shapeList;
 protected:
     // Function used to close an event
