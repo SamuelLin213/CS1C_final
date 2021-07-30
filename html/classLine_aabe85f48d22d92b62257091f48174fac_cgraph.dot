@@ -1,0 +1,23 @@
+digraph "Line::~Line"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Line::~Line",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Line::GetLine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classLine.html#a99f31a56b03cc8e92d30269face52b56",tooltip="Method GetLine: Class Line  This method will return the address of a QLine line.  PRE-CONDITIONS <non..."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Line::setLine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classLine.html#acd74708184a645a711d19209cfd45b47",tooltip="Method setLine: Class Line  This method will set the line using the points saved privately in Line..."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Shape::getDimensions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classShape.html#a6ab7f82dd146b522b981fd5b5451f3dd",tooltip="Method getDimensions: Class Shape  This method will return the vector of ints which stores the dimens..."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Line::draw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classLine.html#a4a74f5e39ea7decae69f921e873f2e71",tooltip="Method draw: Class Line  This method will draw a line using the QLine line stored in Line..."];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Shape::getPen",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classShape.html#ab3420c1972e190923410abcc36a1db78",tooltip="Method getPen: Class Shape  This method will return the QPen address of the calling shape..."];
+  Node5 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Shape::getBrush",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classShape.html#a4fff90728217432c4510dbcdbf3cd9e6",tooltip="Method getBrush: Class Shape  This method will return the QBrush address of the calling shape..."];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="Line::move",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classLine.html#acb7d2077deceacc5525125c04435a0e8",tooltip="Method move: Class Line  This method will move a line using the integer array passed as a parameter t..."];
+  Node8 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

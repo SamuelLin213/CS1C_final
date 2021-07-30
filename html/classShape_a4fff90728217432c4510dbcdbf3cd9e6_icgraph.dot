@@ -1,0 +1,31 @@
+digraph "Shape::getBrush"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Shape::getBrush",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Ellipse::draw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classEllipse.html#af1c5e06340b2df41aaf7de216ea62577",tooltip="Method draw: Class Ellipse  This method will draw an ellipse on the canvas. Returns nothing..."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Ellipse::~Ellipse",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classEllipse.html#a94271a8a2b16101a52491b7e81e28547",tooltip="Destructor ~Ellipse: Class Ellipse  Destructs the ellipse object.  PRE-CONDITIONS <none> ..."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Line::draw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classLine.html#a4a74f5e39ea7decae69f921e873f2e71",tooltip="Method draw: Class Line  This method will draw a line using the QLine line stored in Line..."];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Line::~Line",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classLine.html#aabe85f48d22d92b62257091f48174fac",tooltip="Destructor ~Line: Class Line  Destructs the line object.  PRE-CONDITIONS <none> "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Polygon::draw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPolygon.html#a23f848986c18b1e1cb7651535ce9d5a3",tooltip="Method draw: Class Polygon  This virtual method will draw a polygon on the canvas. Returns nothing.  PRE-CONDITIONS <none> "];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Polygon::~Polygon",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPolygon.html#ace39c67107966db12e13a183f496c3b0",tooltip="Destructor ~Polygon: Class Polygon  Destructs the polygon object.  PRE-CONDITIONS <none> ..."];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="Polyline::draw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPolyline.html#ae9869057dc8ab996141ca90ed080bf63",tooltip="Method draw: Class Polyline  This method will draw a polyline using the QPoint pointer stored in Poly..."];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="Polyline::~Polyline",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPolyline.html#a1d23947e9e7e153e2404ea5bfc4c79e5",tooltip="Destructor ~Polyline: Class Polyline  Destructs the polyline object.  PRE-CONDITIONS <none> ..."];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="Rectangle::draw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRectangle.html#ab29376c2eef482411eeb94721bf8b8e4",tooltip="Method draw: Class Rectangle  This method will draw a Rectangle on the canvas. Returns nothing..."];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="Rectangle::~Rectangle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRectangle.html#a494c076b13aadf26efdce07d23c61ddd",tooltip="Destructor ~Rectangle: Class Rectangle  Destructs the rectangle object.  PRE-CONDITIONS <none> ..."];
+  Node1 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="Shape::~Shape",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classShape.html#ac3b9fc48965274893f25b18aa14ba665",tooltip="Destructor ~Shape: Class Shape  Destructs the shape object.  PRE-CONDITIONS <none> ..."];
+  Node1 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="Text::draw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classText.html#a727645bc28906eb4f593beb140a9ccc3",tooltip="draws the text "];
+}

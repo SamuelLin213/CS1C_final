@@ -1,6 +1,6 @@
 #ifndef TESTIMONIALWINDOW_H
 #define TESTIMONIALWINDOW_H
-
+/*! \file */
 #include <QLabel>
 #include <QtGui>
 #include <QDialog>
@@ -8,18 +8,31 @@
 #include <QPushButton>
 #include <iostream>
 #include <fstream>
-//#include "vector.h"
+#include "vector.h"
 using std::getline;
 using std::string;
 using std::cin;
 using std::cout;
 using std::ifstream;
+using std::ofstream;
 using std::remove;
 
 class testimonialWindow: public QDialog
 {
     Q_OBJECT
     public:
+    /*!*****************************************************************
+    *	@brief Constructor	testimonialWindow:	Class testimonialWindow
+    *___________________________________________________________________
+    *	Constructs a fully instantiated object of the testimonialWindow class.
+    *___________________________________________________________________
+    *	PRE-CONDITIONS
+    *   QDialog* parent
+    *
+    *	POST-CONDITIONS
+    *	This function creates a testimonialWindow object.
+    * @param parent - parent of the dialog
+    *******************************************************************/
         explicit testimonialWindow(QDialog *parent = 0);
 
     struct Testimony{
@@ -74,24 +87,31 @@ class testimonialWindow: public QDialog
       Testimony LoadTestimony(string name);
 
     public slots:
+      /*!*****************************************************************
+      *	@brief Method	submit:	Class testimonialWindow
+      *___________________________________________________________________
+      *	This method will allow the user to submit a testimonial.
+      *___________________________________________________________________
+      *	PRE-CONDITIONS
+      *	<none>
+      *
+      *	POST-CONDITIONS
+      *	Returns nothing.
+      *******************************************************************/
          void submit();
 
+        bool writeFile();
 
     private:
     QLabel *nameLabel;
     QLineEdit *name;
     string author;
-
     QPushButton *submitButton;
     QPushButton *cancelButton;
-
     QLabel *messageLabel;
     QLineEdit *message;
     string description;
-
     QPainter painter;
-
-    bool writeFile();
 };
 
 #endif // TESTIMONIALWINDOW_H

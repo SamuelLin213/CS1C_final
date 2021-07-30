@@ -1,6 +1,7 @@
 #ifndef ELLIPSE_H
 #define ELLIPSE_H
 
+/*! \file */
 #include "Shapes.h"
 //using namespace std;
 

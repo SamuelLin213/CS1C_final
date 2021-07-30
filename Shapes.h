@@ -1,6 +1,6 @@
 #ifndef SHAPES_H
 #define SHAPES_H
-
+/*! \file */
 //general includes
 #include <iostream>
 #include <iomanip>

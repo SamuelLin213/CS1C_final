@@ -1,6 +1,7 @@
 #ifndef RECTANGLE_H
 #define RECTANGLE_H
 
+/*! \file */
 #include "Shapes.h"
 #include <QPaintDevice>
 //using namespace std;
