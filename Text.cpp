@@ -15,7 +15,7 @@ void Text::draw(QPainter* shape)
     shape->save(); //save original state of qpainter
     shape->setPen(getPen());
     shape->setBrush(getBrush());
-    shape->drawText(getDimensions()[0], getDimensions()[1], getDimensions()[3], getDimensions()[2], 0, text.toPlainText());
+    shape->drawText(getDimensions()[0], getDimensions()[1], getDimensions()[2], getDimensions()[3], 0, text.toPlainText());
     shape->restore(); //restore to the original state of qpainter
 }
 QFont Text::getFont()
@@ -31,14 +31,6 @@ void Text::move(int dims_[])
     getDimensions()[0] = dims_[0];
     getDimensions()[1]= dims_[1];
 }
-////int Text::perimeter()
-////{
-////    return 0;
-////}
-////int Text::area()
-////{
-////    return 0;
-////}
 
 void Text::setText(const QString &text_)
 {

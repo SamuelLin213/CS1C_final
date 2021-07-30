@@ -42,7 +42,6 @@ private slots:
     void testimonal();
     void move();
     void remove();
-    void add();
 
 private:
 //    Ui::MainWindow *ui;
@@ -58,7 +57,6 @@ private:
     QPushButton *buttonCircle;
     QPushButton *buttonText;
     QPushButton *buttonLogin;
-    QPushButton *buttonAdd;
     QPushButton *buttonMove;
     QPushButton *buttonRemove;
 };

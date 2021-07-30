@@ -4,12 +4,14 @@
 #include <QPainter>
 #include <QPainterPath>
 #include <QTextEdit>
+#include <QInputDialog>
+#include <string>
 
 canvas::canvas(QWidget *parent)
     : QWidget(parent)
     //, ui(new Ui::canvas)
 {
-    shapeList.push_back(new Line(1, Shape::LINE));
+    shapeList.push_back(new class Line(1, Shape::LINE));
     shapeList.push_back(new class Polyline(2, Shape::POLYLINE));
     shapeList.push_back(new class Polygon(3, Shape::POLYGON));
     shapeList.push_back(new class Rectangle(4, Shape::RECTANGLE));
@@ -22,9 +24,7 @@ canvas::canvas(QWidget *parent)
     shapeList[0]->addDimension(90);
     shapeList[0]->addDimension(100);
     shapeList[0]->addDimension(20);
-    shapeList[0]->setPen(Qt::black);
-    shapeList[0]->setBrush(Qt::black, Qt::SolidPattern);
-//    shapeList[0]->setLine();
+    dynamic_cast<Line*>(shapeList[0])->setLine();
 
     shapeList[1]->addDimension(460);
     shapeList[1]->addDimension(90);
@@ -34,8 +34,41 @@ canvas::canvas(QWidget *parent)
     shapeList[1]->addDimension(40);
     shapeList[1]->addDimension(540);
     shapeList[1]->addDimension(80);
-    shapeList[1]->setPen(Qt::black);
-    shapeList[1]->setBrush(Qt::black, Qt::SolidPattern);
+
+    shapeList[2]->addDimension(900);
+    shapeList[2]->addDimension(90);
+    shapeList[2]->addDimension(910);
+    shapeList[2]->addDimension(20);
+    shapeList[2]->addDimension(970);
+    shapeList[2]->addDimension(40);
+    shapeList[2]->addDimension(980);
+    shapeList[2]->addDimension(80);
+
+    shapeList[3]->addDimension(20);
+    shapeList[3]->addDimension(200);
+    shapeList[3]->addDimension(170);
+    shapeList[3]->addDimension(100);
+
+    shapeList[4]->addDimension(250);
+    shapeList[4]->addDimension(150);
+    shapeList[4]->addDimension(200);
+    shapeList[4]->addDimension(200);
+
+    shapeList[5]->addDimension(520);
+    shapeList[5]->addDimension(200);
+    shapeList[5]->addDimension(170);
+    shapeList[5]->addDimension(100);
+
+    shapeList[6]->addDimension(750);
+    shapeList[6]->addDimension(150);
+    shapeList[6]->addDimension(200);
+    shapeList[6]->addDimension(200);
+
+    shapeList[7]->addDimension(250);
+    shapeList[7]->addDimension(425);
+    shapeList[7]->addDimension(500);
+    shapeList[7]->addDimension(50);
+    dynamic_cast<Text*>(shapeList[7])->setText(QString::fromStdString("Class Project 2 - 2D Graphics Modeler"));
 
     setBackgroundRole(QPalette::Base);
     setAutoFillBackground(true);
@@ -43,51 +76,79 @@ canvas::canvas(QWidget *parent)
 void canvas::paintEvent(QPaintEvent *)
 {
     painter = new QPainter(this);
-//    QVector<QPoint> points;
-//    QVector<QPoint> points2;
+    bool ok;
 
-    for(int i = 0; i < 2; i++)
+    //line, polyline
+    int shapeId;
+    std::vector<int> dimensionVector;
+
+    for(int i = 0; i < (int)(shapeList.size()); i++)
     {
         shapeList[i]->draw(painter);
     }
 
-
-    switch(shapeToDraw)
+    if(shapeToDraw == 1)
     {
-        case 1:
-            //painter->drawLine(this);
-            break;
-        case 2:
-//            points.push_back(QPoint(460, 90));
-//            points.push_back(QPoint(470, 20));
-//            points.push_back(QPoint(530, 40));
-//            points.push_back(QPoint(540, 80));
 
-//            painter->drawPolyline(points);
-            break;
-        case 3:
-            points2.push_back(QPoint(900, 90));
-            points2.push_back(QPoint(910, 20));
-            points2.push_back(QPoint(970, 40));
-            points2.push_back(QPoint(980, 80));
+        shapeId = QInputDialog::getInt(this, tr("Add shape"),
+                                          tr("Enter id of shape:"),
+                                          1, 1, 50, 1, &ok);
 
-            painter->drawPolygon(points2);
-            break;
-        case 4:
-            painter->drawRect(20, 200, 170, 100);
-            break;
-        case 5:
-            painter->drawRect(250, 150, 200, 200);
-            break;
-        case 6:
-            painter->drawEllipse(520, 200, 170, 100);
-            break;
-        case 7:
-            painter->drawEllipse(750, 150, 200, 200);
-            break;
-        case 8:
-            painter->drawText(250, 425, 500, 50, 0, tr("Class Project 2 - 2D Graphics Modeler"));
-            break;
+        for(int i = 1; i <= 2; i++)
+        {
+            int newX = QInputDialog::getInt(this, tr("New Coordinates"),
+                                                 tr("New X:"),
+                                                 0, 0, 850, 1, &ok);
+            int newY = QInputDialog::getInt(this, tr("New Coordinates"),
+                                            tr("New Y:"),
+                                            0, 0, 475, 1, &ok);
+            dimensionVector.push_back(newX);
+            dimensionVector.push_back(newY);
+            //coords[numCoords] = {newX, newY};
+        }
+
+        //loops through vector and assigns dimensions to int array
+        int size = dimensionVector.size();
+        int coordAr[size];
+        for(int index = 0; index < size; index++)
+        {
+            coordAr[index] = dimensionVector[index];
+        }
+
+        shapeList.push_back(new class Line(shapeId, Shape::LINE));
+        //applies new coords
+        shapeList[shapeList.size()-1]->move(coordAr);
+
+        moveShape();
+
+    }
+    else if(shapeToDraw == 2)
+    {
+
+    }
+    else if(shapeToDraw == 3)
+    {
+
+    }
+    else if(shapeToDraw == 4)
+    {
+
+    }
+    else if(shapeToDraw == 5)
+    {
+
+    }
+    else if(shapeToDraw == 6)
+    {
+
+    }
+    else if(shapeToDraw == 7)
+    {
+
+    }
+    else if(shapeToDraw == 8)
+    {
+
     }
 }
 QPainter* canvas::getPainter()

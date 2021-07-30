@@ -26,9 +26,9 @@ QLine& Line::GetLine()
 //virtual functions
 void Line::draw(QPainter* shape)
 {
-  QPoint p1(getDimensions()[0], getDimensions()[1]);
-  QPoint p2(getDimensions()[2], getDimensions()[3]);
-  line.setPoints(p1, p2);
+//  QPoint p1(getDimensions()[0], getDimensions()[1]);
+//  QPoint p2(getDimensions()[2], getDimensions()[3]);
+//  line.setPoints(p1, p2);
 
   shape->save(); //save original state of qpainter
   shape->setPen(getPen());
@@ -40,8 +40,10 @@ void Line::draw(QPainter* shape)
 
 void Line::move(int dims[])
 {
-//    getDimensions()[0] = dims[0];
-//    getDimensions()[1] = dims[1];
-    getDimensions()[2] = dims[0];
-    getDimensions()[3] = dims[1];
+    getDimensions()[0] = dims[0];
+    getDimensions()[1] = dims[1];
+    getDimensions()[2] = dims[2];
+    getDimensions()[3] = dims[3];
+
+    this->setLine();
 }
