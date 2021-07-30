@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['line',['line',['../classLine.html#a46f2b87b902ff22b4d0ad6766ac04f1f',1,'Line']]]
+  ['description',['description',['../structtestimonialWindow_1_1Testimony.html#a8aca771163232c7de870eb7004ceaed4',1,'testimonialWindow::Testimony']]]
 ];

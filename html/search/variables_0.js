@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['font',['font',['../classText.html#aafbc87056bd5a3250299f2459078bf67',1,'Text']]]
+  ['author',['author',['../structtestimonialWindow_1_1Testimony.html#a441423a460455fbacfa9ce72b42650eb',1,'testimonialWindow::Testimony']]]
 ];

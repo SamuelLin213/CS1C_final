@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['ellipse_2eh',['Ellipse.h',['../Ellipse_8h.html',1,'']]]
+  ['canvas_2eh',['canvas.h',['../canvas_8h.html',1,'']]],
+  ['contactwindow_2eh',['contactWindow.h',['../contactWindow_8h.html',1,'']]]
 ];

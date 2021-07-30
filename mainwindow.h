@@ -1,6 +1,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
+/*! \file */
 #include <QWidget>
 #include <QPushButton>
 #include "loginWindow.h"

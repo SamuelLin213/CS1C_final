@@ -5,7 +5,7 @@
 #include <QtGui>
 #include <QDialog>
 #include <QPushButton>
-
+/*! \file */
 class contactWindow: public QDialog
 {
     Q_OBJECT

@@ -1,6 +1,6 @@
 #ifndef LOGINWINDOW_H
 #define LOGINWINDOW_H
-
+/*! \file */
 #include <QDialog>
 #include <QLabel>
 #include <QLineEdit>

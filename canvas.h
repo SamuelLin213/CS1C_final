@@ -8,7 +8,7 @@
 #include <QtCore>
 #include <QWidget>
 #include "Shapes.h"
-
+/*! \file */
 class canvas : public QWidget
 {
     Q_OBJECT

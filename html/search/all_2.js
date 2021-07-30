@@ -1,5 +1,9 @@
 var searchData=
 [
-  ['draw',['draw',['../classEllipse.html#af1c5e06340b2df41aaf7de216ea62577',1,'Ellipse::draw()'],['../classLine.html#a4a74f5e39ea7decae69f921e873f2e71',1,'Line::draw()'],['../classPolygon.html#a23f848986c18b1e1cb7651535ce9d5a3',1,'Polygon::draw()'],['../classPolyline.html#ae9869057dc8ab996141ca90ed080bf63',1,'Polyline::draw()'],['../classRectangle.html#ab29376c2eef482411eeb94721bf8b8e4',1,'Rectangle::draw()'],['../classShape.html#aff0b3b1b1d590e402984ef3ac1af58af',1,'Shape::draw()'],['../classText.html#a727645bc28906eb4f593beb140a9ccc3',1,'Text::draw()']]],
-  ['doxygenmain',['doxygenMain',['../md_doxygenMain.html',1,'']]]
+  ['canvas',['canvas',['../classcanvas.html',1,'']]],
+  ['canvas_2eh',['canvas.h',['../canvas_8h.html',1,'']]],
+  ['capacity',['capacity',['../classmyVector.html#a7ef152bd8e86bf0a88caf82dd64c75aa',1,'myVector']]],
+  ['contactus',['contactUs',['../classMainWindow.html#aab22ce291b76b427b2e4989a34c44423',1,'MainWindow']]],
+  ['contactwindow',['contactWindow',['../classcontactWindow.html',1,'contactWindow'],['../classcontactWindow.html#aebf6fdea4f17aca4344bffbfcb512a7f',1,'contactWindow::contactWindow()']]],
+  ['contactwindow_2eh',['contactWindow.h',['../contactWindow_8h.html',1,'']]]
 ];

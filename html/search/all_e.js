@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['_7eellipse',['~Ellipse',['../classEllipse.html#a94271a8a2b16101a52491b7e81e28547',1,'Ellipse']]],
-  ['_7eline',['~Line',['../classLine.html#aabe85f48d22d92b62257091f48174fac',1,'Line']]],
-  ['_7epolygon',['~Polygon',['../classPolygon.html#ace39c67107966db12e13a183f496c3b0',1,'Polygon']]],
-  ['_7epolyline',['~Polyline',['../classPolyline.html#a1d23947e9e7e153e2404ea5bfc4c79e5',1,'Polyline']]],
-  ['_7erectangle',['~Rectangle',['../classRectangle.html#a494c076b13aadf26efdce07d23c61ddd',1,'Rectangle']]],
-  ['_7eshape',['~Shape',['../classShape.html#ac3b9fc48965274893f25b18aa14ba665',1,'Shape']]],
-  ['_7etext',['~Text',['../classText.html#a2d49e5c280e205125b149f7777ae30c7',1,'Text']]]
+  ['testimonal',['testimonal',['../classMainWindow.html#a4a0437a331313ccf79bbb2cfe945bc67',1,'MainWindow']]],
+  ['testimonialwindow',['testimonialWindow',['../classtestimonialWindow.html',1,'testimonialWindow'],['../classtestimonialWindow.html#a1537ab43189ee645a2fb46a1f26720e4',1,'testimonialWindow::testimonialWindow()']]],
+  ['testimonialwindow_2eh',['testimonialWindow.h',['../testimonialWindow_8h.html',1,'']]],
+  ['testimony',['Testimony',['../structtestimonialWindow_1_1Testimony.html',1,'testimonialWindow']]],
+  ['testimony',['Testimony',['../structtestimonialWindow_1_1Testimony.html#a27a6f040cc009764dcaacbcc9b5ba58b',1,'testimonialWindow::Testimony::Testimony()'],['../structtestimonialWindow_1_1Testimony.html#a618093a05aa0b1d7d6ea9b7fc6ebc1e2',1,'testimonialWindow::Testimony::Testimony(string authors, string descriptions)']]],
+  ['text',['Text',['../classText.html',1,'Text'],['../classText.html#af397c04b19a48c70b8eacd3554c409b6',1,'Text::Text(int id=-1, ShapeType type=NONE)'],['../classText.html#ab3e26143fccc52699bcc5149cae852bc',1,'Text::Text()'],['../classText.html#affe3b3380532868fb1a5f32999651242',1,'Text::text()']]],
+  ['text_2eh',['Text.h',['../Text_8h.html',1,'']]]
 ];
