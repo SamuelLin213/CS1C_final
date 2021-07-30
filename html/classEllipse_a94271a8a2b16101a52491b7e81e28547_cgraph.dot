@@ -1,0 +1,32 @@
+digraph "Ellipse::~Ellipse"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Ellipse::~Ellipse",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Ellipse::isCircle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classEllipse.html#aeeae8b905e6e3a773d5ca6f693048e1f",tooltip="Method isCircle: Class Ellipse  This method will check if a ellipse is also a circle. Returns bool value.  PRE-CONDITIONS <none> "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Shape::getDimensions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classShape.html#a6ab7f82dd146b522b981fd5b5451f3dd",tooltip="Method getDimensions: Class Shape  This method will return the vector of ints which stores the dimens..."];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Shape::getShape",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classShape.html#a558bed85fed8077108f17fe4c7ce38aa",tooltip="Method getShape: Class Shape  This method will return the ShapeType of the calling shape..."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Ellipse::draw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classEllipse.html#af1c5e06340b2df41aaf7de216ea62577",tooltip="Method draw: Class Ellipse  This method will draw an ellipse on the canvas. Returns nothing..."];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Shape::getPen",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classShape.html#ab3420c1972e190923410abcc36a1db78",tooltip="Method getPen: Class Shape  This method will return the QPen address of the calling shape..."];
+  Node5 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Shape::getBrush",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classShape.html#a4fff90728217432c4510dbcdbf3cd9e6",tooltip="Method getBrush: Class Shape  This method will return the QBrush address of the calling shape..."];
+  Node5 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="Ellipse::move",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classEllipse.html#ad157c6d594be45c4cc23d4053b839baa",tooltip="Method move: Class Ellipse  This method will move an ellipse using the integer array passed as a para..."];
+  Node8 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="Ellipse::perimeter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classEllipse.html#a989be9728c47165cb371583d95276616",tooltip="Method perimeter: Class Ellipse  This virtual method will calculate the perimeter of an ellipse..."];
+  Node9 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="Ellipse::area",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classEllipse.html#adc035e56be53308cbd3557c9df732670",tooltip="Method area: Class Ellipse  This virtual method will calculate the area of a ellipse, which is always zero.  PRE-CONDITIONS <none> "];
+  Node10 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

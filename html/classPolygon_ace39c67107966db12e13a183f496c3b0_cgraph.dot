@@ -1,0 +1,25 @@
+digraph "Polygon::~Polygon"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Polygon::~Polygon",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Polygon::draw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPolygon.html#a23f848986c18b1e1cb7651535ce9d5a3",tooltip="Method draw: Class Polygon  This virtual method will draw a polygon on the canvas. Returns nothing.  PRE-CONDITIONS <none> "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Shape::getDimensions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classShape.html#a6ab7f82dd146b522b981fd5b5451f3dd",tooltip="Method getDimensions: Class Shape  This method will return the vector of ints which stores the dimens..."];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Shape::getPen",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classShape.html#ab3420c1972e190923410abcc36a1db78",tooltip="Method getPen: Class Shape  This method will return the QPen address of the calling shape..."];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Shape::getBrush",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classShape.html#a4fff90728217432c4510dbcdbf3cd9e6",tooltip="Method getBrush: Class Shape  This method will return the QBrush address of the calling shape..."];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Polygon::move",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPolygon.html#a64214cb8f2bd677034b157ef10a59a36",tooltip="Method move: Class Polygon  This virtual method will move a polygon on the canvas. Returns nothing.  PRE-CONDITIONS int[] - array of integers holding coordinates. "];
+  Node6 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Polygon::perimeter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPolygon.html#a3d0912c1640636dc24af3da2e70e48fa",tooltip="Method perimeter: Class Polygon  This virtual method will calculate the perimeter of a polygon and re..."];
+  Node7 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="Polygon::area",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPolygon.html#a87cfa4190dfebb9c7c8a9a0355684942",tooltip="Method area: Class Polygon  This virtual method will calculate the area of a polygon and return the a..."];
+  Node8 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

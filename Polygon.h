@@ -1,6 +1,7 @@
 #ifndef POLYGON_H
 #define POLYGON_H
 
+/*! \file */
 #include "Shapes.h"
 //using namespace std;
 

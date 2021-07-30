@@ -1,6 +1,7 @@
 #ifndef POLYLINE_H
 #define POLYLINE_H
 
+/*! \file */
 #include "Shapes.h"
 //using namespace std;
 

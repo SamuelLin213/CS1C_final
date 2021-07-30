@@ -1,0 +1,25 @@
+digraph "Text::area"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Text::area",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Text::setText",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classText.html#a47c6097e1d7dba659a2bbc6d27c97ff9",tooltip="Sets the text. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Text::setTColor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classText.html#a915fe190cecb825a698c766809571e7e",tooltip="Sets the text color. "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Text::setAlignment",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classText.html#aacba6ed9c31bb9433903aec9bc000072",tooltip="Sets the allignment. "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Text::setPointSize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classText.html#aee1cd501d8bea778e93b7430e8f8efdc",tooltip="Sets the point size. "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Text::setFontFamily",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classText.html#a4dc33b170b1dd05873919757ec9c01d3",tooltip="Sets the font family. "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Text::setFontStyle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classText.html#ae8e009a6c54ea2e4d56bb872d5a19e12",tooltip="Sets the font style. "];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="Text::setFontWeight",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classText.html#a39267b1189798177bd7b170b3bf9db55",tooltip="Sets the font weight. "];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="Text::getFont",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classText.html#acb0cbec93eb68a03faffc9e70f5895b7",tooltip="Gets the font. "];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="Text::getText",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classText.html#ab1ccc5ff9050cb8c63919bfc82c69a18",tooltip="Gets the text. "];
+}

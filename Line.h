@@ -1,6 +1,7 @@
 #ifndef LINE_H
 #define LINE_H
 
+/*! \file */
 #include "Shapes.h"
 #include <QLine>
 //using namespace std;

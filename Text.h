@@ -1,6 +1,7 @@
 #ifndef TEXT_H
 #define TEXT_H
 
+/*! \file */
 #include "Shapes.h"
 //using namespace std;
 

@@ -1,0 +1,18 @@
+digraph "Rectangle::isSquare"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Rectangle::isSquare",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Rectangle::draw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRectangle.html#ab29376c2eef482411eeb94721bf8b8e4",tooltip="Method draw: Class Rectangle  This method will draw a Rectangle on the canvas. Returns nothing..."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Rectangle::~Rectangle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRectangle.html#a494c076b13aadf26efdce07d23c61ddd",tooltip="Destructor ~Rectangle: Class Rectangle  Destructs the rectangle object.  PRE-CONDITIONS <none> ..."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Rectangle::perimeter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRectangle.html#a780c7f267cdd4bc530722ec539482b91",tooltip="Method perimeter: Class Rectangle  This virtual method will calculate the perimeter of a Rectangle..."];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Rectangle::area",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRectangle.html#aa1ec8bdef1152a1010c9e6de5c58c28b",tooltip="Method area: Class Rectangle  This virtual method will calculate the area of a Rectangle, which multiplies the width by the height.  PRE-CONDITIONS <none> "];
+  Node5 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}
